@@ -14,23 +14,22 @@
       <transition name="fade" mode='out-in'>
         <router-view class='main-content'/>
       </transition>
-      <div class="main-bg">
-        <img class='main-bg-img' src="./tu@2x.png" alt="背景图">
+      <div class="main-bg" ref='mainBgWrapper'>
+        <img class='main-bg-img' ref='mainBg' :style='bgImgStyle' src="http://p0l3yrxj7.bkt.clouddn.com/tu@2x.jpg" alt="背景图">
       </div>
     </main>
     <footer class='copyright'>
-      Copyright © 2006-2015 lu9.com | 上海想星商务服务有限公司版权所有 | 沪ICP备17041663号
+      Copyright © | 上海想星商务服务有限公司版权所有 | 沪ICP备17041663号
     </footer>
   </div>
 </template>
 <script>
-  import logo from './logo@2x.png'
-
+  import logoImg from './logo@2x.png'
   export default {
     name: 'homePC',
     data () {
       return {
-        logoImg: logo,
+        logoImg: logoImg,
         navList: {
           home: {
             title: '首页',
@@ -44,12 +43,39 @@
             title: '我们',
             link: {name: 'ours'}
           }
+        },
+        bgImgStyle: {
+          width: 'auto',
+          height: 'auto'
         }
       }
     },
     computed: {
       navActive () {
         return this.$route.meta.active
+      }
+    },
+    mounted () {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    },
+    methods: {
+      handleResize () {
+        // 在屏幕尺寸变化的时候，动态的改变背景图片的大小
+        // 思路：背景图片比例 1920 * 898 如果，实际rate大于原始rate则，宽度过宽，应设置图片height: 100%; 反之，设置width: 100%;
+        const originRate = 1920 / 898
+        let imgWrapperWidth = this.$refs.mainBgWrapper.clientWidth
+        let imgWrapperHeight = this.$refs.mainBgWrapper.clientHeight
+        let practicalRate = imgWrapperWidth / imgWrapperHeight
+        console.log('宽高', imgWrapperWidth, imgWrapperHeight)
+        console.log(practicalRate, originRate, practicalRate >= originRate)
+        if (practicalRate >= originRate) {
+          this.bgImgStyle.width = '100%'
+          this.bgImgStyle.height = 'auto'
+        } else {
+          this.bgImgStyle.height = '100%'
+          this.bgImgStyle.width = 'auto'
+        }
       }
     }
   }
@@ -106,12 +132,10 @@
   #homePC .main-bg {
     position: absolute;
     top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-  }
-  #homePC .main-bg-img {
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
   }
   #homePC .copyright {
     flex: none;

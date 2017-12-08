@@ -1,17 +1,19 @@
 <template>
   <div id="connectUS">
-    <img class='connectUS-img' src="./connectUS.png" alt="联系我们主图">
-    <div class='paragraph'>
-      联系地址：上海市长宁区天山路762号方糖小镇
-    </div>
-    <div class='paragraph'>
-      邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp编：200050
-    </div>
-    <div class='paragraph'>
-      客服电话：400-678-7080（周一至周日）
-    </div>
-    <div class='paragraph'>
-      邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：cs@xiangxing365.com
+    <img class='connectUS-img' src="http://p0l3yrxj7.bkt.clouddn.com/connectUS.jpg" alt="联系我们主图">
+    <div class="paragraph-wrapper">
+      <div class='paragraph'>
+        联系地址：上海市长宁区天山路762号方糖小镇
+      </div>
+      <div class='paragraph'>
+        邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp编：200050
+      </div>
+      <div class='paragraph'>
+        客服电话：400-678-7080
+      </div>
+      <div class='paragraph'>
+        邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：cs@xiangxing365.com
+      </div>
     </div>
   </div>
 </template>

@@ -8,31 +8,31 @@
       <span class='msg-text'>怦然心动</span>
     </div>
     <div class="QRCode">
-      <VueQRCode :config='qrConfig'/>
     </div>
     <div class="QRCode-desc">
-      扫码进入appleStore
+      扫码下载APP
     </div>
   </div>
 </template>
 <script>
-  import VueQRCode from 'vue-qart'
-  import qrImg from './white.png'
-
   export default {
     name: 'pcHomeStage',
-    components: {
-      VueQRCode
-    },
     data () {
       return {
         qrConfig: {
-          value: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8',
-          imagePath: qrImg,
-          filter: 'color',
-          size: 400
+          value: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8'
         }
       }
+    },
+    mounted () {
+      let qrcode = new QRCode(document.querySelector('.QRCode'), {
+        text: this.qrConfig.value,
+        width: 200,
+        height: 200,
+        colorDark: '#000000',
+        colorLight: '#ffffff'
+      })
+      console.log(qrcode)
     }
   }
 </script>
@@ -65,7 +65,9 @@
     letter-spacing: 30px;
   }
   .pcHomeStage .QRCode {
+    padding: 15px;
     margin-top: 30px;
+    margin-bottom: 10px;
     background-color: #fff;
   }
   .pcHomeStage .QRCode-desc {

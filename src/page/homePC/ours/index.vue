@@ -8,6 +8,9 @@
             {{item.title}}
           </span>
         </router-link>
+        <a :href="item.link" v-for='item in linkList' class='jumpLink'>
+          {{item.title}}
+        </a>
       </div>
       <div class="article">
         <div class="title">
@@ -35,7 +38,13 @@
             title: '联系我们',
             link: {name: 'connectUS'}
           }
-        }
+        },
+        linkList: [
+          {
+            title: '星洞商城 >',
+            link: 'http://app.starluxe.cn'
+          }
+        ]
       }
     },
     computed: {
@@ -50,14 +59,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     width: 100%;
   }
   #ours .content {
     display: flex;
     padding: 20px 30px;
     height: 100%;
-    width: 90%;
+    width: 100%;
     background-color: #fff;
   }
   #ours .nav-wrapper {
@@ -65,6 +73,7 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
+    max-width:
   }
   #ours .nav-item {
     display: flex;
@@ -95,6 +104,12 @@
   }
   #ours .nav-item.active .point {
     background-color: #fff;
+  }
+  #ours .jumpLink {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--暗红);
   }
   #ours .article {
     display: flex;

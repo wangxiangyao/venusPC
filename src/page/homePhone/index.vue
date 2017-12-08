@@ -1,7 +1,7 @@
 <template>
   <div class="homePhone">
     <div class="bg-img-wrapper">
-      <img class='bg-img' src="./homePhone-bg.png" alt="背景图">
+      <img class='bg-img' src="http://p0l3yrxj7.bkt.clouddn.com/homePhone-bg.jpg" alt="背景图">
     </div>
     <div class="content">
       <div class="logo">
