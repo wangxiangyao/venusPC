@@ -7,6 +7,7 @@ import attentionWC from '@/page/homePC/attentionWC'
 import ours from '@/page/homePC/ours'
 import aboutUS from '@/page/homePC/ours/aboutUS'
 import connectUS from '@/page/homePC/ours/connectUS'
+import toStarluxeCommodity from '@/page/homePC/toStarluxeCommodity'
 
 Vue.use(Router)
 const ua = navigator.userAgent
@@ -80,6 +81,14 @@ export default new Router({
             active: 'attentionWC'
           },
           component: attentionWC
+        },
+        {
+          path: 'toStarluxeCommodity',
+          name: 'toStarluxeCommodity',
+          meta: {
+            active: 'toStarluxeCommodity'
+          },
+          component: toStarluxeCommodity
         }
       ]
     },

@@ -42,6 +42,10 @@
           ours: {
             title: '我们',
             link: {name: 'ours'}
+          },
+          toStarluxeCommodity: {
+            title: '星洞奢品',
+            link: {name: 'toStarluxeCommodity'}
           }
         },
         bgImgStyle: {
