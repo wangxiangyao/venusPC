@@ -10,10 +10,6 @@
       <div class="empty">
 
       </div>
-      <div class="sub-title">
-        <span class="sub-title-1">全球重奢</span>
-        <span class="sub-title-2">新人首单免费体验权</span>
-      </div>
       <div class="action">
         <a class="button-download ios-download" :href='downLoadLink'>
           <img class="icon icon-system" src="./ico_ios.png" alt="ios-icon">
@@ -77,18 +73,6 @@
     margin-top: 40px;
     font-size: 13px;
     color: #fff;
-  }
-  .homePhone .sub-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 13px;
-  }
-  .homePhone .sub-title-2 {
-    color:#42A9FB;
-    margin-top: 5px;
   }
   .homePhone .action {
     display: flex;
