@@ -1,13 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import homePC from '@/page/homePC'
-import homePhone from '@/page/homePhone'
-import pcHomeStage from '@/page/homePC/home'
-import attentionWC from '@/page/homePC/attentionWC'
-import ours from '@/page/homePC/ours'
-import aboutUS from '@/page/homePC/ours/aboutUS'
-import connectUS from '@/page/homePC/ours/connectUS'
-import toStarluxeCommodity from '@/page/homePC/toStarluxeCommodity'
+// import homePC from '@/page/homePC'
+// import homePhone from '@/page/homePhone'
+// import pcHomeStage from '@/page/homePC/home'
+// import attentionWC from '@/page/homePC/attentionWC'
+// import ours from '@/page/homePC/ours'
+// import aboutUS from '@/page/homePC/ours/aboutUS'
+// import connectUS from '@/page/homePC/ours/connectUS'
+// import toStarluxeCommodity from '@/page/homePC/toStarluxeCommodity'
+const homePC = () => import('@/page/homePC')
+const homePhone = () => import('@/page/homePhone')
+const pcHomeStage = () => import('@/page/homePC/home')
+const attentionWC = () => import('@/page/homePC/attentionWC')
+const ours = () => import('@/page/homePC/ours')
+const aboutUS = () => import('@/page/homePC/ours/aboutUS')
+const connectUS = () => import('@/page/homePC/ours/connectUS')
+const toStarluxeCommodity = () => import('@/page/homePC/toStarluxeCommodity')
 
 Vue.use(Router)
 const ua = navigator.userAgent
