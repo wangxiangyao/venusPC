@@ -1,23 +1,35 @@
 <template>
   <div class="homePhone">
     <div class="bg-img-wrapper">
-      <img class='bg-img' src="http://p0l3yrxj7.bkt.clouddn.com/homePhone-bg.jpg" alt="背景图">
+      <img class='bg-img' src="http://venus-resource.oss-cn-shanghai.aliyuncs.com/static/pc/pc-phone-bg.png" alt="背景图">
     </div>
     <div class="content">
-      <div class="logo">
-        <img src="./logo@2x.png" alt="logo图片">
-      </div>
       <div class="title">
         全球奢侈品共享平台
       </div>
+      <div class="empty">
+
+      </div>
+      <div class="sub-title">
+        <span class="sub-title-1">全球重奢</span>
+        <span class="sub-title-2">新人首单免费体验权</span>
+      </div>
       <div class="action">
-        <a class="button-download" :href='downLoadLink'>
-          下载APP
+        <a class="button-download ios-download" :href='downLoadLink'>
+          <img class="icon icon-system" src="./ico_ios.png" alt="ios-icon">
+          <div class="button-text">
+            iPhone版下载
+          </div>
+        </a>
+        <a class="button-download android-download" :href="androidDownload">
+          <img class="icon icon-system" src="./ico_android.png" alt="android-icon">
+          <div class="button-text">
+            Android版下载
+          </div>
         </a>
       </div>
-      <div class="copyright">
-        <span>沪ICP备17041663号</span>
-        <span>上海想星商务服务有限公司版权所有</span>
+      <div class="logo">
+        <img class="logo-img" src="./logo.png" alt="logo图片">
       </div>
     </div>
   </div>
@@ -27,7 +39,8 @@
     name: 'homePhone',
     data () {
       return {
-        downLoadLink: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8'
+        downLoadLink: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8',
+        androidDownload: 'http://venus-resource.oss-cn-shanghai.aliyuncs.com/static/pc/app-release.apk'
       }
     }
   }
@@ -53,44 +66,58 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 25%;
     height: 100%;
+  }
+  .homePhone .empty {
+    flex: 1;
   }
   .homePhone .title {
     letter-spacing: 10px;
     padding-left: 10px;
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 40px;
+    font-size: 13px;
     color: #fff;
+  }
+  .homePhone .sub-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 13px;
+  }
+  .homePhone .sub-title-2 {
+    color:#42A9FB;
+    margin-top: 5px;
   }
   .homePhone .action {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    flex: none;
     width: 100%;
   }
   .homePhone .button-download {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 30%;
-    padding: 15px 20px 15px 30px;
+    justify-content: space-around;
+    padding: 10px 20px 10px 30px;
+    margin-top: 20px;
     border-radius: 100px;
-    width: 70%;
-    font-size: 20px;
-    letter-spacing: 10px;
+    width: 55%;
+    font-size: 15px;
     color: #fff;
-    background-color: #f64163;
+    border: 1px solid #fff;
   }
-  .homePhone .copyright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    color: #aaa;
-    font-size: 12px;
-    letter-spacing: 3px;
+  .homePhone .icon-system {
+    width: 19px;
+    height: 22px;
+  }
+  .homePhone .logo {
+    padding: 20px;
+  }
+  .homePhone .logo .logo-img {
+    width: 132px;
   }
 </style>
