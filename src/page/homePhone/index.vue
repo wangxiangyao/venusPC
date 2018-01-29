@@ -36,7 +36,7 @@
     data () {
       return {
         downLoadLink: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8',
-        androidDownload: 'http://venus-resource.oss-cn-shanghai.aliyuncs.com/static/pc/app-release.apk'
+        androidDownload: 'http://venus-resource.oss-cn-shanghai.aliyuncs.com/static/pc/starluxe.apk'
       }
     }
   }
@@ -45,7 +45,7 @@
   .homePhone {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
   }
   .homePhone .bg-img {
     height: 100%;
