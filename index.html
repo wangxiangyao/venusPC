@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>想星-星洞</title>
+    <meta name="sharecontent" data-msg-img="你的缩略图地址" data-msg-title="你的标题" data-msg-content="你的简介" data-msg-callBack="" data-line-img="你的缩略图地址" data-line-title="你的标题" data-line-callBack=""/>
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-32x32.png"> -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/logo.png">
     <!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
     <!-- Add to home screen for Android and modern mobile browsers -->
     <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
@@ -32,6 +33,9 @@
     <noscript>
       This is your fallback content in case JavaScript fails to load.
     </noscript>
+    <div style="display: none">
+      <img src="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/logo.png" alt="logo">
+    </div>
     <div id="app"></div>
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>

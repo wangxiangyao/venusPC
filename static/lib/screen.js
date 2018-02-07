@@ -6,7 +6,7 @@
         var dpr = 0;
         var scale = 0;
         var tid;
-        var flexible = lib.flexible || (lib.flexible = {});  
+        var flexible = lib.flexible || (lib.flexible = {});
 
         if (metaEl) {
             //        console.warn('将根据已有的meta标签来设置缩放比例');
@@ -78,7 +78,6 @@
         win.addEventListener('resize', function() {
             clearTimeout(tid);
             tid = setTimeout(refreshRem, 300);
-            alert('resize')
         }, false);
         win.addEventListener('pageshow', function(e) {
             if (e.persisted) {
