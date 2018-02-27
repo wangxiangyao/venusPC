@@ -28,6 +28,7 @@
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
     <script src="<%= htmlWebpackPlugin.files.publicPath %>static/lib/qrcode.js"></script>
     <script src="<%= htmlWebpackPlugin.files.publicPath %>static/lib/screen.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
   </head>
   <body>
     <noscript>

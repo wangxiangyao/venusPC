@@ -31,12 +31,14 @@
   </div>
 </template>
 <script>
+  // TODO: 添加微信分享的功能
+
   export default {
     name: 'homePhone',
     data () {
       return {
         downLoadLink: 'https://itunes.apple.com/cn/app/%E6%98%9F%E6%B4%9E/id1299589728?mt=8',
-        androidDownload: 'http://venus-resource.oss-cn-shanghai.aliyuncs.com/static/pc/starluxe.apk'
+        androidDownload: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.android.star'
       }
     }
   }
